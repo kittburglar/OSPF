@@ -1,3 +1,5 @@
+Kittiphong Xayasane
+
 I built and tested my router program on the school’s linux servers. This mean I should be using the same version of make and java compiler that is on the school linux servers.
 
 1. On a hostX, run the network emulator (nse-linux386). An example of running the network emulator looks like this:
