@@ -1,0 +1,40 @@
+I built and tested my router program on the school’s linux servers. This mean I should be using the same version of make and java compiler that is on the school linux servers.
+
+1. On a hostX, run the network emulator (nse-linux386). An example of running the network emulator looks like this:
+
+./nse-linux386 hostY 9999 
+or
+./nse-linux386 ubuntu1204-006.student.cs.uwaterloo.ca 9999
+
+2. On the hostY, run the routers which you get by running "make". You can run each router in a different shell but they must be on the same host.
+   An example of running the routers looks like this:
+
+In shell 1:
+java router 1 hostX 9999 9991
+In shell 2:
+java router 2 hostX 9999 9992
+In shell 3:
+java router 3 hostX 9999 9993
+In shell 4:
+java router 4 hostX 9999 9994
+In shell 5;
+java router 5 hostX 9999 9995
+or
+In shell 1:
+@ubuntu1204-006% java router 1 ubuntu1204-002.student.cs.uwaterloo.ca 9999 9991
+In shell 2:
+@ubuntu1204-006% java router 2 ubuntu1204-002.student.cs.uwaterloo.ca 9999 9992
+In shell 3:
+@ubuntu1204-006% java router 3 ubuntu1204-002.student.cs.uwaterloo.ca 9999 9993
+In shell 4:
+@ubuntu1204-006% java router 4 ubuntu1204-002.student.cs.uwaterloo.ca 9999 9994
+In shell 5:
+@ubuntu1204-006% java router 5 ubuntu1204-002.student.cs.uwaterloo.ca 9999 9995
+
+If the router automatically returns, then try a different port. 
+If the nse does not respond after running a router, then try a different port (last argument). 
+After these 5 routers are run, there should be router log files which display the 
+Link State Database and Routing Information Protocol changes by running OSPF.
+
+The routers will continue to listen for Link State Database Protocol Units (LSPDU) Packets.
+You must manually stop the running router program to stop the router (CTRL + C).
